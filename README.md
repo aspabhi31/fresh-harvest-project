@@ -1,0 +1,1 @@
+This project was a part of Virtual Internship 2 at Altiq Technologies Pvt. Ltd. as part of Codebasics Data Science and GenAI bootcamp. The link of the demo is as follows: https://fresh-harvest-project-jzv9mnvgzq7k4kxsznl7fz.streamlit.app/
