@@ -3,7 +3,6 @@ from model_helper import predict
 
 st.title("Fresh Harvest AI Inspection")
 
-uploaded_file = st.file_uploader("Upload the file", type=["jpg", "png"])
 import tempfile
 import os
 
