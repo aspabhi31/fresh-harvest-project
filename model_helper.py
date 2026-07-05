@@ -5,7 +5,22 @@ from PIL import Image
 import os
 
 trained_model = None
-class_names = ['Front Breakage', 'Front Crushed', 'Front Normal', 'Rear Breakage', 'Rear Crushed', 'Rear Normal']
+class_names = ['F_Banana',
+ 'F_Lemon',
+ 'F_Lulo',
+ 'F_Mango',
+ 'F_Orange',
+ 'F_Strawberry',
+ 'F_Tamarillo',
+ 'F_Tomato',
+ 'S_Banana',
+ 'S_Lemon',
+ 'S_Lulo',
+ 'S_Mango',
+ 'S_Orange',
+ 'S_Strawberry',
+ 'S_Tamarillo',
+ 'S_Tomato']
 
 
 # Load the pre-trained ResNet model
