@@ -25,7 +25,7 @@ class_names = ['F_Banana',
 
 # Load the pre-trained ResNet model
 class FruitAndFreshClassifierResNet(nn.Module):
-    def __init__(self, num_classes=6):
+    def __init__(self, num_classes=16):
         super().__init__()
         self.model = models.resnet50(weights='DEFAULT')
         # Freeze all layers except the final fully connected layer
