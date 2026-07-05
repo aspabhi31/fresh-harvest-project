@@ -4,11 +4,13 @@ from model_helper import predict
 st.title("Fresh Harvest AI Inspection")
 
 uploaded_file = st.file_uploader("Upload the file", type=["jpg", "png"])
+import tempfile
+import os
 
-if uploaded_file:
-    image_path = "temp_file.jpg"
-    with open(image_path, "wb") as f:
-        f.write(uploaded_file.getbuffer())
-        st.image(uploaded_file, caption="Uploaded File", use_container_width=True)
-        prediction = predict(image_path)
-        st.info(f"Predicted Class: {prediction}")
+# Get the original extension (e.g., .png, .jpg)
+ext = os.path.splitext(uploaded_file.name)[1]  # includes the dot
+with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp:
+    tmp.write(uploaded_file.getbuffer())
+    image_path = tmp.name
+
+prediction = predict(image_path)
